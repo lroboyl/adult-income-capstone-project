@@ -1,0 +1,73 @@
+# Training configuration for the Adult Income Predictor.
+# Stores all training settings and model hyperparameters in one place.
+
+data:
+  path: data/adult.csv
+  test_size: 0.2
+  random_state: 42
+  target_column: income
+
+preprocessing:
+  drop_columns: []
+  categorical_columns:
+    - workclass
+    - education
+    - marital-status
+    - occupation
+    - relationship
+    - race
+    - sex
+    - native-country
+  numeric_columns:
+    - age
+    - fnlwgt
+    - education-num
+    - capital-gain
+    - capital-loss
+    - hours-per-week
+
+mlflow:
+  experiment_name: adult_income_predictor
+  tracking_uri: mlruns
+
+models:
+  # Run 1: Logistic Regression (baseline)
+  logistic_regression:
+    C: 1.0
+    max_iter: 500
+    solver: lbfgs
+    class_weight: balanced
+
+  # Run 2: Random Forest — default depth
+  random_forest_default:
+    n_estimators: 100
+    max_depth: null
+    min_samples_split: 2
+    class_weight: balanced
+    random_state: 42
+
+  # Run 3: Random Forest — constrained depth
+  random_forest_shallow:
+    n_estimators: 200
+    max_depth: 10
+    min_samples_split: 5
+    class_weight: balanced
+    random_state: 42
+
+  # Run 4: Gradient Boosting
+  gradient_boosting:
+    n_estimators: 200
+    learning_rate: 0.1
+    max_depth: 5
+    subsample: 0.8
+    random_state: 42
+
+  # Run 5: XGBoost
+  xgboost:
+    n_estimators: 300
+    learning_rate: 0.05
+    max_depth: 6
+    subsample: 0.8
+    colsample_bytree: 0.8
+    eval_metric: logloss
+    random_state: 42

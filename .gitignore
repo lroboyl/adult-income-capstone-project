@@ -1,0 +1,36 @@
+# Environment & secrets
+.env
+
+# Data files
+data/*.csv
+data/*.parquet
+data/*.json
+
+# Model artifacts
+models/
+*.pkl
+*.joblib
+*.xgb
+
+# MLflow tracking (local)
+mlruns/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

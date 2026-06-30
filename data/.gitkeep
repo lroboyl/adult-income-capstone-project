@@ -1,0 +1,6 @@
+# Data files are not committed to Git.
+# Download the Adult Income dataset from:
+# https://archive.ics.uci.edu/dataset/2/adult
+#
+# Place adult.csv (or adult.data + adult.test) in this directory.
+# The preprocess.py script expects: data/adult.csv
