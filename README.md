@@ -8,7 +8,7 @@ Under the hood, an LLM pulls the relevant details out of your message and passes
 
 ## Table of Contents
 
-1. [How It Works](#how-it-works)
+1. [How It Works & Architecture](#how-it-works--architecture)
 2. [Setup](#setup)
 3. [Running the App](#running-the-app)
 4. [Results](#results)
@@ -17,7 +17,7 @@ Under the hood, an LLM pulls the relevant details out of your message and passes
 
 ---
 
-## How It Works
+## How It Works & Architecture
 
 ```
 Your message  →  LLM extracts features  →  Preprocessing  →  ML model  →  Prediction  →  LLM explains
@@ -35,7 +35,7 @@ The reasoning behind specific preprocessing choices — why `StandardScaler` ove
 
 ## Setup
 
-**You'll need:** Python 3.10 or 3.11, and a [Nebius AI Studio](https://studio.nebius.com/) account with an API key.
+**You'll need:** Python 3.10 or later (tested up to 3.13), and a [Nebius AI Studio](https://studio.nebius.com/) account with an API key.
 
 ### 1. Clone and install
 
@@ -89,7 +89,7 @@ mlflow ui --backend-store-uri mlruns
 # then open http://localhost:5000
 ```
 
-> **Mac users:** port 5000 is often taken by AirPlay Receiver on macOS Monterey and later. Use a different port instead:
+> **Mac users:** port 5000 is taken by AirPlay Receiver on macOS Monterey and later. Use a different port instead:
 > ```bash
 > mlflow ui --backend-store-uri mlruns --port 5001
 > # then open http://127.0.0.1:5001
