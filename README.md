@@ -262,3 +262,6 @@ Things I'd add with more time:
 - **SHAP values** — so the explanation tells you not just *what* the model predicted but *why*, at a feature level
 - **Dataset versioning with DVC** — right now the data folder is just git-ignored
 - **User feedback loop** — a simple thumbs up/down that logs to a file for future retraining
+## MLflow Results
+
+![Run 1](images/run1.png) ![Run 2](images/run2.png) ![Run 3](images/run3.png) ![Run 4](images/run4.png) ![Run 5](images/run5.png)
