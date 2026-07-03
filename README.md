@@ -4,6 +4,8 @@ Just describe yourself in plain English — *"I'm a 38-year-old software enginee
 
 Under the hood, an LLM pulls the relevant details out of your message and passes them to a machine learning model trained on US Census data. No forms, no dropdowns, just a conversation.
 
+🎬 **[Watch the demo on YouTube](https://youtu.be/eDLbHdtml-c)**
+
 ---
 
 ## Table of Contents
